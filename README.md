@@ -26,6 +26,4 @@ $(10:20] \rightarrow$ **morno**
 
 $(20:28.18] \rightarrow$ **quente**
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
-
 A ideia é que, ao inserir a temperatura do dia de hoje, o algoritmo classifique-a em um dos 4 estados acima, e então consiga estabelecer qual o estado mais provável de temperatura para o dia seguinte.
