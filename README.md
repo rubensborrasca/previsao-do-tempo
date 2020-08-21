@@ -38,6 +38,8 @@ Porém, ainda assim o código pode ser útil. Se você deseja apenas descobrir q
 
 Simples. Digamos que temos a temperatura de hoje, e precisamos prever a do dia seguinte. O programa faz isso com sucesso, como já foi visto. Agora, se amanhã tivermos a necessidade de prever a temperatura do dia seguinte, o código pode usar o estado de temperatura do dia atual, ao invés do estado de temperatura previsto. Desta forma, evita-se a **propagação de erros** pelo algoritmo, e consegue-se uma precisão maior. O resultado pode ser visto na pasta _"/graphs/retroalimentado.png"_
 
+![predict.png](https://raw.githubusercontent.com/rubensborrasca/previsao-do-tempo/master/graphs/retroalimentado.png)
+
 ## Possíveis fontes de erro
 
 Como dito anteriormente, cadeias de Markov não são ideais para fazer previsões de séries temporais. Para isso, recomenda-se métodos como ARIMA, ARMA, AR, MA, entre outros. O objetivo deste projeto foi mostrar uma alternativa, para funções mais rápidas e que não precisem de tanta precisão.
