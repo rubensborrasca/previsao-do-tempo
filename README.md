@@ -10,6 +10,8 @@ Neste trabalho pretendo, através da medida de temperatura de um dia, prever qua
 
 ## Por que Krasnodar?
 
+![Imagem da cidade de Krasnodar by Kayak](https://content.r9cdn.net/rimg/dimg/fc/b6/a85df15d-city-30188-16581daa525.jpg?crop=true&width=1000&height=600&xhint=2177&yhint=1215)
+
 O presente trabalho seria eficaz no tratamento de previsão do tempo para qualquer cidade do mundo, desde que fosse adquirido um bom conjunto de dados. Dito isso, optei por escrever minhas conclusões sobre Krasnodar, uma cidade situada no sudoeste da parte europeia da Rússia.
 
 A escolha desta cidade foi feita porque é, há muitos anos, conhecida mundialmente como a cidade com maior amplitude térmica do mundo. No conjunto de dados utilizado para a construção deste trabalho, por exemplo, tivemos registros de temperaturas a -11,3 °C, bem como a 28,2 °C. Como há uma possibilidade muito ampla de temperaturas, é uma boa forma de testar o algoritmo.
@@ -22,13 +24,15 @@ A ideia é que, ao inserir a temperatura do dia de hoje, o algoritmo classifique
 
 ## Conjunto de dados
 
-O conjunto de dados utilizado foi extraído da plataforma [kaggle](https://www.kaggle.com/), e pode ser encontrado neste repositório, na pasta principal, sob o nome de _"GlobalLandTemperaturesByCity.csv"_. Neste dataset, existem informações de mais de 3400 cidades no mundo.
+O conjunto de dados utilizado foi extraído da plataforma [kaggle](https://www.kaggle.com/). Neste dataset, existem informações de mais de 3400 cidades no mundo.
 
 Sobre a cidade de Krasnodar, temos registros de temperatura de 1743 até agosto de 2013. Ao todo, são 3161 observações registradas no dataset.
 
 ## Utilizando o algoritmo para prever temperatura
 
 O algoritmo utilizado para tratar cadeias de Markov não é recomendado para previsões em espaços de tempo muito grandes. Isso ocorre porque, a partir de um determinado número de iterações, entra-se no **estado estacionário**, o que significa que a previsão será sempre a mesma. Portanto, se a intenção for realizar a previsão do tempo meses e meses à frente, este não é o melhor caminho. Uma das figuras presentes na pasta _"/graphs/predict.png"_ mostra que, a partir da 4ª previsão, o programa já erra o estado de temperatura, apesar de acertar todos os outros estados. A ideia do algoritmo, portanto, é que ele prevê muito bem temperaturas nas datas próximas às do dia inicial, mas é limitado para previsões mais longas.
+
+![predict.png](https://raw.githubusercontent.com/rubensborrasca/previsao-do-tempo/master/graphs/predict.png)
 
 Porém, ainda assim o código pode ser útil. Se você deseja apenas descobrir qual será o estado da temperatura no dia seguinte, este funciona perfeitamente. Realizando um ajuste no algoritmo, pode-se torná-lo _retroalimentado_. Mas o que isso implica?
 
